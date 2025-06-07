@@ -188,7 +188,7 @@ header {
   }
 
   // .fa-bars {
-     // display: none;
+  // display: none;
   // }
 
   // nav,
@@ -324,6 +324,7 @@ main {
     .sobre_txt {
       display: flex;
       flex-direction: column;
+
       h3 {
         font-size: calc(var(--size) * 1.5);
       }
@@ -359,7 +360,29 @@ main {
       text-transform: uppercase;
     }
 
+    .carousel-inner {
+      .carousel-item {
+        background: var(--gradient);
+        border-radius: 10%;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: grid;
+        place-items: center;
+        padding: 5%;
 
+        i{
+
+        }
+
+        h3{
+
+        }
+
+        p{
+
+        }
+      }
+    }
   }
 }
 
