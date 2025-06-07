@@ -8,12 +8,13 @@
 :root {
   --fonte: 'Raleway', sans-serif;
   --size: 1.3rem;
+  --radius: 15% 35%;
 
   --gradient: linear-gradient(214deg, #00FF85 6.04%, #0085FF 92.95%);
   --gradient-hover: linear-gradient(214.02deg, #0085FF 6.04%, #00FF85 92.95%);
   --bg: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
   --null: linear-gradient(228.74deg, #949393CC 0%, #1F1E1ECC 84.9%);
-  --invert: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
+  --null-invert: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
 
   --solid-100: #ffffff;
   --solid-50: #ffffff80;
@@ -49,6 +50,7 @@
   box-sizing: border-box;
   list-style: none;
   transition: .3s ease;
+  cursor: default;
 }
 
 html {
@@ -165,7 +167,7 @@ header {
     place-items: center;
     height: 50px;
     width: 50px;
-    border-radius: 15% 35%;
+    border-radius: var(--radius);
     color: var(--solid-100);
     font-size: calc(var(--size) * 1.8);
     font-weight: 600;
@@ -185,9 +187,9 @@ header {
     }
   }
 
-  .fa-bars {
-    // display: none;
-  }
+  // .fa-bars {
+     // display: none;
+  // }
 
   // nav,
   // .contato {
@@ -273,6 +275,7 @@ main {
       }
 
       span {
+        display: block;
         background: var(--gradient);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -299,7 +302,65 @@ main {
     display: none;
   }
 
-  
+  #sobre {
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto;
+    gap: 15px;
+
+    .sobre_img {
+      background: url(../imgs/bordas.svg) no-repeat;
+      background-size: cover;
+
+      .sobre_img_inner {
+        background: var(--null-invert);
+        border-radius: var(--radius);
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        margin: auto;
+      }
+    }
+
+    .sobre_txt {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-size: calc(var(--size) * 1.5);
+      }
+
+      p {
+        margin: 10px auto;
+      }
+
+      span {
+        background: var(--gradient);
+        border-radius: 8px 16px;
+        width: 50%;
+        align-self: flex-end;
+        aspect-ratio: 4 / 1;
+        font-size: calc(var(--size) * 1.25);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+
+        &:hover {
+          transform: scale(1.1);
+          background: var(--gradient-hover);
+        }
+      }
+    }
+  }
+
+  #know {
+    h2 {
+      text-align: center;
+      font-size: calc(var(--size) * 1.5);
+      text-transform: uppercase;
+    }
+
+
+  }
 }
 
 //#endregion mobile
