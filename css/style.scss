@@ -327,6 +327,7 @@ main {
 
       h3 {
         font-size: calc(var(--size) * 1.5);
+        font-weight: bold;
       }
 
       p {
@@ -343,11 +344,13 @@ main {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        font-weight: 600;
 
 
         &:hover {
           transform: scale(1.1);
           background: var(--gradient-hover);
+          font-weight: bolder;
         }
       }
     }
@@ -358,10 +361,17 @@ main {
       text-align: center;
       font-size: calc(var(--size) * 1.5);
       text-transform: uppercase;
+      font-weight: bold;
     }
 
     .carousel-inner {
-      .carousel-item {
+
+      .active {
+        z-index: 1;
+      }
+
+      .carousel-item,
+      .active {
         background: var(--gradient);
         border-radius: 10%;
         width: 100%;
@@ -369,21 +379,77 @@ main {
         display: grid;
         place-items: center;
         padding: 5%;
+        grid-template-rows: repeat(3, 33.3%);
 
-        i{
-
+        i {
+          font-size: calc(var(--size) * 4);
         }
 
-        h3{
-
+        h3 {
+          font-size: calc(var(--size) * 1.5);
+          font-weight: bold;
+          text-align: center;
         }
 
-        p{
-
+        p {
+          font-size: calc(var(--size) * 1);
+          text-align: center;
         }
       }
     }
   }
+
+  #lvl {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: calc(var(--size) * 1.5);
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .cards_lvl {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .cards_lvl_inner {
+
+        background-color: var(--gradient);
+        width: 100%;
+        aspect-ratio: 5 / 1;
+        border-radius: 15px 40px;
+        background: var(--null);
+
+        &:hover {
+          box-shadow: 5px 5px 10px var(--solid-30);
+          scale: 1.1;
+        }
+
+        .cards_lvl_reach {
+          background: var(--gradient);
+          height: 100%;
+          border-radius: 15px 0 0 40px;
+
+
+          &:hover {
+            background: var(--gradient-hover);
+          }
+        }
+
+        .cards_lvl_reach:nth-child(1) {
+          background-color: red;
+          width: 50%;
+          height: 100%;
+        }
+
+
+      }
+    }
+  }
+
+
 }
 
 //#endregion mobile

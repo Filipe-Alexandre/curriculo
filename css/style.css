@@ -249,6 +249,7 @@ main #sobre .sobre_txt {
 }
 main #sobre .sobre_txt h3 {
   font-size: calc(var(--size) * 1.5);
+  font-weight: bold;
 }
 main #sobre .sobre_txt p {
   margin: 10px auto;
@@ -263,17 +264,24 @@ main #sobre .sobre_txt span {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  font-weight: 600;
 }
 main #sobre .sobre_txt span:hover {
   transform: scale(1.1);
   background: var(--gradient-hover);
+  font-weight: bolder;
 }
 main #know h2 {
   text-align: center;
   font-size: calc(var(--size) * 1.5);
   text-transform: uppercase;
+  font-weight: bold;
 }
-main #know .carousel-inner .carousel-item {
+main #know .carousel-inner .active {
+  z-index: 1;
+}
+main #know .carousel-inner .carousel-item,
+main #know .carousel-inner .active {
   background: var(--gradient);
   border-radius: 10%;
   width: 100%;
@@ -281,4 +289,58 @@ main #know .carousel-inner .carousel-item {
   display: grid;
   place-items: center;
   padding: 5%;
+  grid-template-rows: repeat(3, 33.3%);
+}
+main #know .carousel-inner .carousel-item i,
+main #know .carousel-inner .active i {
+  font-size: calc(var(--size) * 4);
+}
+main #know .carousel-inner .carousel-item h3,
+main #know .carousel-inner .active h3 {
+  font-size: calc(var(--size) * 1.5);
+  font-weight: bold;
+  text-align: center;
+}
+main #know .carousel-inner .carousel-item p,
+main #know .carousel-inner .active p {
+  font-size: calc(var(--size) * 1);
+  text-align: center;
+}
+main #lvl {
+  display: flex;
+  flex-direction: column;
+}
+main #lvl h2 {
+  font-size: calc(var(--size) * 1.5);
+  text-align: center;
+  font-weight: bold;
+}
+main #lvl .cards_lvl {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main #lvl .cards_lvl .cards_lvl_inner {
+  background-color: var(--gradient);
+  width: 100%;
+  aspect-ratio: 5/1;
+  border-radius: 15px 40px;
+  background: var(--null);
+}
+main #lvl .cards_lvl .cards_lvl_inner:hover {
+  box-shadow: 5px 5px 10px var(--solid-30);
+  scale: 1.1;
+}
+main #lvl .cards_lvl .cards_lvl_inner .cards_lvl_reach {
+  background: var(--gradient);
+  height: 100%;
+  border-radius: 15px 0 0 40px;
+}
+main #lvl .cards_lvl .cards_lvl_inner .cards_lvl_reach:hover {
+  background: var(--gradient-hover);
+}
+main #lvl .cards_lvl .cards_lvl_inner .cards_lvl_reach:nth-child(1) {
+  background-color: red;
+  width: 50%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
