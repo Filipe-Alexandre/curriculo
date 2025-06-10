@@ -13,7 +13,7 @@
   --gradient: linear-gradient(214deg, #00FF85 6.04%, #0085FF 92.95%);
   --gradient-hover: linear-gradient(214.02deg, #0085FF 6.04%, #00FF85 92.95%);
   --bg: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
-  --null: linear-gradient(228.74deg, #949393CC 0%, #1F1E1ECC 84.9%);
+  --null: linear-gradient(228.74deg, #949393 0%, #1F1E1E 84.9%);
   --null-invert: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
 
   --solid-100: #ffffff;
@@ -259,15 +259,26 @@ main {
   margin: auto;
   padding: 1%;
 
-  #home {
+  section {
     display: flex;
     flex-direction: column;
     margin: 25px auto;
     gap: 15px;
+  }
 
+  h2 {
+    text-align: center;
+    font-size: calc(var(--size) * 1.5);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  #home {
     .home_txt {
       h2 {
         font-size: calc(var(--size) * 3);
+        text-align: left;
+        text-transform: none;
       }
 
       p {
@@ -303,11 +314,6 @@ main {
   }
 
   #sobre {
-    display: flex;
-    flex-direction: column;
-    margin: 25px auto;
-    gap: 15px;
-
     .sobre_img {
       background: url(../imgs/bordas.svg) no-repeat;
       background-size: cover;
@@ -357,12 +363,6 @@ main {
   }
 
   #know {
-    h2 {
-      text-align: center;
-      font-size: calc(var(--size) * 1.5);
-      text-transform: uppercase;
-      font-weight: bold;
-    }
 
     .carousel-inner {
 
@@ -400,9 +400,6 @@ main {
   }
 
   #lvl {
-    display: flex;
-    flex-direction: column;
-
     h2 {
       font-size: calc(var(--size) * 1.5);
       text-align: center;
@@ -413,42 +410,95 @@ main {
       display: flex;
       flex-direction: column;
       gap: 15px;
+      width: 100%;
+
 
       .cards_lvl_inner {
-
-        background-color: var(--gradient);
+        background: var(--null);
         width: 100%;
         aspect-ratio: 5 / 1;
-        border-radius: 15px 40px;
-        background: var(--null);
+        border-radius: 10px 30px;
+        position: relative;
 
-        &:hover {
-          box-shadow: 5px 5px 10px var(--solid-30);
-          scale: 1.1;
+        &:nth-child(1) .cards_lvl_reach {
+          width: 80%;
+        }
+
+        &:nth-child(2) .cards_lvl_reach {
+          width: 60%;
+        }
+
+        &:nth-child(3) .cards_lvl_reach {
+          width: 30%;
         }
 
         .cards_lvl_reach {
-          background: var(--gradient);
           height: 100%;
-          border-radius: 15px 0 0 40px;
+          background: var(--gradient);
+          border-radius: 10px 0 0 30px;
+        }
 
+        &:hover {
+          background: var(--null-invert);
+          box-shadow: 5px 5px 10px var(--solid-30);
+          scale: 1.1;
 
-          &:hover {
+          .cards_lvl_reach {
             background: var(--gradient-hover);
+          }
+
+          span {
+            color: var(--solid-100);
+            font-weight: bold;
+            font-size: calc(var(--size) * 1.2);
           }
         }
 
-        .cards_lvl_reach:nth-child(1) {
-          background-color: red;
-          width: 50%;
-          height: 100%;
+        span {
+          color: var(--solid-50);
+          z-index: 1;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          width: 100%;
+
         }
-
-
       }
     }
   }
 
+
+  #portifolio {
+    .active {
+      z-index: 1;
+    }
+
+    .cards_port_inner {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background: var(--null);
+      border-radius: 30px;
+      display: grid;
+      grid-template-rows: 80% repeat(2, 10%);
+      padding: 3%;
+
+      .cards_port_frame {
+        background: var(--null-invert);
+        border-radius: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          font-weight: bold;
+        }
+      }
+    }
+  }
 
 }
 

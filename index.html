@@ -112,37 +112,50 @@
             <h2>Desenvolvimento atual</h2>
             <div class="cards_lvl">
                 <div class="cards_lvl_inner">
+                    <span>Desenvolvimento Web <i class="fa-solid fa-paintbrush"></i></span>
                     <div class="cards_lvl_reach"></div>
                 </div>
                 <div class="cards_lvl_inner">
+                    <span>Web Design <i class="fa-solid fa-laptop-code"></i></span>
                     <div class="cards_lvl_reach"></div>
                 </div>
                 <div class="cards_lvl_inner">
+                    <span>Programação <i class="fa-solid fa-square-binary"></i></span>
                     <div class="cards_lvl_reach"></div>
                 </div>
             </div>
         </section>
         <!-- sect#lvl>(h2{Desenvolvimento atual}+(.cards_lvl>(.cards_lvl_inner>.cards_lvl_reach)*3)) -->
 
-        <section id="portfolio">
+        <section id="portifolio">
             <h2>Meus projetos</h2>
-            <h3>Últimos projetos realizados</h3>
-            <div class="cards_port">
-                <div class="cards_port_inner">
-                    <div class="cards_port_frame"></div>
-                    <a href="" target="_blank">site.com</a>
-                    <strong>00/00/0000</strong>
+            <div id="portCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item cards_port_inner active">
+                        <div class="cards_port_frame"></div>
+                        <a href="" target="_blank">site1.com</a>
+                        <strong>00/00/0000</strong>
+                    </div>
+
+                    <div class="carousel-item cards_port_inner">
+                        <div class="cards_port_frame"></div>
+                        <a href="" target="_blank">site2.com</a>
+                        <strong>00/00/0000</strong>
+                    </div>
+
+                    <div class="carousel-item cards_port_inner">
+                        <div class="cards_port_frame"></div>
+                        <a href="" target="_blank">site3.com</a>
+                        <strong>00/00/0000</strong>
+                    </div>
                 </div>
-                <div class="cards_port_inner">
-                    <div class="cards_port_frame"></div>
-                    <a href="" target="_blank">site.com</a>
-                    <strong>00/00/0000</strong>
-                </div>
-                <div class="cards_port_inner">
-                    <div class="cards_port_frame"></div>
-                    <a href="" target="_blank">site.com</a>
-                    <strong>00/00/0000</strong>
-                </div>
+
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#portCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#portCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button> -->
             </div>
         </section>
         <!-- sect#portfolio>(h2{Meus projetos}+h3{Últimos projetos realizados}+.cards_port>(.cards_port_inner>((.cards_port_frame)+a[href="" target="_blank"]{site.com}+strong{00/00/0000}))*3) -->
