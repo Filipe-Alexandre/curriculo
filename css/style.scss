@@ -1,5 +1,6 @@
 // #region imports
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 // #endregion imports
 
@@ -71,7 +72,7 @@ html {
 }
 
 body {
-  font-family: 'Raleway';
+  font-family: 'Poppins', sans-serif;
   font-size: var(--size);
   background: var(--bg);
   color: var(--solid-100);
@@ -608,6 +609,7 @@ main {
 
       span {
         width: 60px;
+
         i {
           animation: pulse 4s ease infinite;
 
@@ -647,14 +649,54 @@ main {
 
 footer {
   text-align: center;
+  color: var(--solid-50);
+
+  span {
+    font-weight: bold;
+
+    &::before {
+      content: '<>';
+      color: var(--solid-100);
+    }
+
+    &::after {
+      content: '</>';
+      color: var(--solid-100);
+    }
+  }
 
   .back {
     position: fixed;
-    height: 50px;
+    z-index: 1;
+    height: 60px;
     aspect-ratio: 1 / 1;
     bottom: 20px;
     right: 20px;
-    z-index: 1;
+    border-radius: 50%;
+    background: var(--gradient);
+    display: grid;
+    place-items: center;
+
+    &:hover {
+      color: var(--solid-100);
+      font-weight: bolder;
+      box-shadow: 2px 2px 10px var(--solid-50);
+      transform: scale(1.1);
+
+      i{
+        font-size: calc(var(--size) * 1.8);
+      }
+
+    }
+
+    &:active {
+      box-shadow: inset -2px -2px 10px var(--solid-50);
+      background: var(--gradient-hover);
+    }
+
+    i {
+      font-size: calc(var(--size) * 1.5);
+    }
   }
 }
 
