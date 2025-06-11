@@ -28,7 +28,7 @@
 */
 @keyframes pulse {
   50% {
-    font-size: calc(var(--size) * 2.1);
+    transform: scale(1.1);
     color: var(--solid-100);
   }
 }
@@ -445,7 +445,7 @@ main #social span {
   width: 70px;
   aspect-ratio: 1/1;
   border-radius: var(--radius);
-  font-size: calc(var(--size) * 2);
+  font-size: calc(var(--size) * 1.9);
   font-weight: bolder;
 }
 main #social span:hover {
@@ -466,6 +466,37 @@ main #social .social_redes {
   justify-content: space-evenly;
   color: var(--solid-50);
 }
+main #social .social_redes span {
+  width: 60px;
+}
 main #social .social_redes span i {
-  animation: pulse 3s ease infinite;
+  animation: pulse 4s ease infinite;
+}
+main #social .social_redes span i:hover {
+  animation: none;
+  cursor: pointer;
+}
+main #social .social_redes span:nth-child(1) i {
+  animation-delay: 0.25s;
+}
+main #social .social_redes span:nth-child(2) i {
+  animation-delay: 0.5s;
+}
+main #social .social_redes span:nth-child(3) i {
+  animation-delay: 0.75s;
+}
+main #social .social_redes span:nth-child(4) i {
+  animation-delay: 1s;
+}
+
+footer {
+  text-align: center;
+}
+footer .back {
+  position: fixed;
+  height: 50px;
+  aspect-ratio: 1/1;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */

@@ -47,7 +47,7 @@
 
 @keyframes pulse {
   50% {
-    font-size: calc(var(--size) * 2.1);
+    transform: scale(1.1);
     color: var(--solid-100);
   }
 }
@@ -581,7 +581,7 @@ main {
       width: 70px;
       aspect-ratio: 1 / 1;
       border-radius: var(--radius);
-      font-size: calc(var(--size) * 2);
+      font-size: calc(var(--size) * 1.9);
       font-weight: bolder;
 
       &:hover {
@@ -607,13 +607,55 @@ main {
       color: var(--solid-50);
 
       span {
+        width: 60px;
         i {
-          animation: pulse 3s ease infinite;
+          animation: pulse 4s ease infinite;
+
+          &:hover {
+            animation: none;
+            cursor: pointer;
+          }
+        }
+
+        &:nth-child(1) {
+          i {
+            animation-delay: 0.25s;
+          }
+        }
+
+        &:nth-child(2) {
+          i {
+            animation-delay: 0.5s;
+          }
+        }
+
+        &:nth-child(3) {
+          i {
+            animation-delay: 0.75s;
+          }
+        }
+
+        &:nth-child(4) {
+          i {
+            animation-delay: 1s;
+          }
         }
       }
     }
   }
+}
 
+footer {
+  text-align: center;
+
+  .back {
+    position: fixed;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+  }
 }
 
 //#endregion mobile
