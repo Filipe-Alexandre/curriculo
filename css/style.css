@@ -13,19 +13,17 @@
   --solid-30: #ffffff4d;
 }
 
-/*
 .light:root {
   --gradient: linear-gradient(214.02deg, #ff6600 6.04%, #FFFF00 92.95%);
   --gradient-hover: linear-gradient(214.02deg, #FFFF00 6.04%, #ff6600 92.95%);
   --bg: linear-gradient(45deg, #FFFFFF 0%, #8D8D8D 100%);
   --null: linear-gradient(228.74deg, #D9D9D9CC 0%, #757575CC 84.9%);
   --invert: linear-gradient(113.49deg, #444C4D -30.3%, #111113 58.12%);
-
   --solid-100: #000000;
   --solid-50: #00000080;
   --solid-30: #0000004d;
 }
-*/
+
 @keyframes pulse {
   50% {
     transform: scale(1.1);
@@ -146,6 +144,7 @@ header .fa-xmark {
 header .fa-bars:hover,
 header .fa-xmark:hover {
   filter: invert(0.5);
+  cursor: pointer;
 }
 header .contato {
   display: none;
@@ -156,6 +155,7 @@ header nav {
   top: 0;
   right: 0;
   background: var(--bg);
+  z-index: 1;
   height: 100vh;
   width: 50vw;
   flex-direction: column;
@@ -163,6 +163,8 @@ header nav {
   align-items: center;
 }
 header nav ul {
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -249,7 +251,8 @@ main #home .home_txt h2 span {
 main #home .home_txt p {
   margin: 10px auto;
 }
-main #home .home_txt span {
+main #home .home_txt span,
+main #home .home_txt a {
   display: block;
   background: var(--gradient);
   -webkit-background-clip: text;
@@ -258,13 +261,21 @@ main #home .home_txt span {
   color: transparent;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-main #home .home_txt span:hover {
+main #home .home_txt span:hover,
+main #home .home_txt a:hover {
   background: var(--gradient-hover);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+}
+main #home .home_txt i {
+  cursor: pointer;
+  font-size: calc(var(--size) * 1.2);
 }
 main #home .home_img {
   display: none;
