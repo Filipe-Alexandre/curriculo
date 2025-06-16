@@ -30,9 +30,29 @@ themes.addEventListener("change", () => {
 });
 
 //MAIN
-//SOBRE
-// Idade
-const idade = document.querySelector(".idade");
-const ano = new Date().getFullYear();
+  //SOBRE
+    // Idade
+    const idade = document.querySelector(".idade");
+    const ano = new Date().getFullYear();
 
 idade.textContent = ano - 2002;
+
+
+//SOCIAL
+  //Link
+    document.querySelector(".fa-whatsapp").addEventListener("click", function () {
+    window.open("https://web.whatsapp.com", "_blank");
+
+  });
+    document.querySelector(".fa-instagram").addEventListener("click", function () {
+    window.open("https://instagram.com", "_blank");
+
+  });
+    document.querySelector(".fa-github").addEventListener("click", function () {
+    window.open("https://github.com", "_blank");
+
+  });
+    document.querySelector(".fa-linkedin").addEventListener("click", function () {
+    window.open("https://linkedin.com", "_blank");
+
+  });
