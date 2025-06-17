@@ -34,10 +34,10 @@ themes.addEventListener("change", () => {
 // Front
   document.addEventListener("DOMContentLoaded", function () {
     new Typed("#DevFront", {
-      strings: ["Front-end","Front-end","Front-end"],
+      strings: ["Front-end"],
       typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000,
+      backSpeed: 100,
+      backDelay: 1500,
       loop: true
     });
   });
