@@ -6,13 +6,13 @@ const navbarClose = document.querySelector(".fa-xmark");
 const themes = document.querySelector(".check")
 
 navbarOpen.addEventListener("click", () => {
-    navbar.style.display = "flex"
-    navbarOpen.style.display = "none"
+  navbar.style.display = "flex"
+  navbarOpen.style.display = "none"
 }
 );
 navbarClose.addEventListener("click", () => {
-    navbar.style.display = "none"
-    navbarOpen.style.display = "block"
+  navbar.style.display = "none"
+  navbarOpen.style.display = "block"
 }
 );
 
@@ -29,30 +29,41 @@ themes.addEventListener("change", () => {
   }
 });
 
-//MAIN
-  //SOBRE
-    // Idade
-    const idade = document.querySelector(".idade");
-    const ano = new Date().getFullYear();
+// MAIN
+// SOBRE
+// Front
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed("#DevFront", {
+      strings: ["Front-end","Front-end","Front-end"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000,
+      loop: true
+    });
+  });
+
+// Idade
+const idade = document.querySelector(".idade");
+const ano = new Date().getFullYear();
 
 idade.textContent = ano - 2002;
 
 
-//SOCIAL
-  //Link
-    document.querySelector(".fa-whatsapp").addEventListener("click", function () {
-    window.open("https://web.whatsapp.com", "_blank");
+// SOCIAL
+// Links
+document.querySelector(".fa-whatsapp").addEventListener("click", function () {
+  window.open("https://web.whatsapp.com", "_blank");
 
-  });
-    document.querySelector(".fa-instagram").addEventListener("click", function () {
-    window.open("https://instagram.com", "_blank");
+});
+document.querySelector(".fa-instagram").addEventListener("click", function () {
+  window.open("https://instagram.com", "_blank");
 
-  });
-    document.querySelector(".fa-github").addEventListener("click", function () {
-    window.open("https://github.com", "_blank");
+});
+document.querySelector(".fa-github").addEventListener("click", function () {
+  window.open("https://github.com", "_blank");
 
-  });
-    document.querySelector(".fa-linkedin").addEventListener("click", function () {
-    window.open("https://linkedin.com", "_blank");
+});
+document.querySelector(".fa-linkedin").addEventListener("click", function () {
+  window.open("https://linkedin.com", "_blank");
 
-  });
+});

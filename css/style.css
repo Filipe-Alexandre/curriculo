@@ -64,6 +64,14 @@ body::-webkit-scrollbar-thumb {
   border-radius: 16px;
 }
 
+.typed-cursor {
+  display: inline;
+  vertical-align: baseline;
+  color: var(--solid-100);
+  font-weight: bold;
+  animation: blink 0.7s infinite;
+}
+
 .switch {
   position: relative;
   display: inline-block;
@@ -243,10 +251,12 @@ main h2:hover:before {
   color: currentColor;
 }
 main #home .home_txt h2 {
-  font-size: calc(var(--size) * 3);
+  font-size: calc(var(--size) * 2.85);
   text-align: left;
   text-transform: none;
   margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: default;
 }
 main #home .home_txt h2:hover:before {
@@ -260,7 +270,7 @@ main #home .home_txt p {
 }
 main #home .home_txt span,
 main #home .home_txt a {
-  display: block;
+  display: inline-block;
   background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -269,8 +279,6 @@ main #home .home_txt a {
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 main #home .home_txt span:hover,
 main #home .home_txt a:hover {
@@ -551,4 +559,14 @@ footer .back:active {
 }
 footer .back i {
   font-size: calc(var(--size) * 1.5);
+}
+
+@media screen and (min-width: 768px) {
+  header h1::after {
+    content: "Tablet 768px";
+    position: absolute;
+    transform: translateX(100%);
+    width: 50vw;
+    color: red;
+  }
 }/*# sourceMappingURL=style.css.map */
