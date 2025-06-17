@@ -562,11 +562,17 @@ footer .back i {
 }
 
 @media screen and (min-width: 768px) {
-  header h1::after {
-    content: "Tablet 768px";
-    position: absolute;
-    transform: translateX(100%);
-    width: 50vw;
-    color: red;
+  /*
+  header {
+    h1 {
+      &::after {
+        content: "Tablet 768px";
+        position: absolute;
+        transform: translateX(100%);
+        width: 50vw;
+        color: red;
+      }
+    }
   }
+    */
 }/*# sourceMappingURL=style.css.map */
