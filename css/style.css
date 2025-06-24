@@ -562,17 +562,323 @@ footer .back i {
 }
 
 @media screen and (min-width: 768px) {
-  /*
   header {
-    h1 {
-      &::after {
-        content: "Tablet 768px";
-        position: absolute;
-        transform: translateX(100%);
-        width: 50vw;
-        color: red;
-      }
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-    */
+  header h1 {
+    order: 2;
+    align-self: center;
+  }
+  header .fa-bars,
+  header .fa-xmark {
+    order: 3;
+  }
+  header .contato {
+    order: 1;
+    height: 45px;
+    aspect-ratio: 1/5;
+    background: var(--gradient);
+    display: grid;
+    place-items: center;
+    color: var(--solid-100);
+    font-size: calc(var(--size) * 1);
+    position: relative;
+    transition: 0.3s ease;
+    border-radius: 8px 16px;
+  }
+  header .contato:hover {
+    scale: 1.1;
+    font-weight: bold;
+    background: var(--gradient-hover);
+  }
+  header nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: var(--bg);
+    z-index: 2;
+    height: 100vh;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  header nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60%;
+  }
+  header nav ul li a {
+    position: relative;
+    color: var(--solid-100);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  header nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0%;
+    bottom: 0%;
+    background: var(--gradient);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 300ms cubic-bezier(0.57, -0.02, 0.31, 0.71);
+  }
+  header nav ul li a:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+    transform-origin: center;
+    color: currentColor;
+  }
+  main #home {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  main #home .home_txt p {
+    font-size: calc(var(--size) * 0.9);
+  }
+  main #home .home_img {
+    display: grid;
+    grid-template-columns: 97% 1fr;
+    place-items: center;
+  }
+  main #home .home_img .foto {
+    width: 95%;
+    aspect-ratio: 3/4;
+    background: var(--null-invert);
+    border-radius: 16px 36px;
+  }
+  main #home .home_img span {
+    color: var(--solid-50);
+    rotate: 90deg;
+    height: 10px;
+  }
+  main #redes {
+    display: none;
+  }
+  main #sobre .sobre_img {
+    background: url(../imgs/bordas.svg) no-repeat;
+    background-size: cover;
+  }
+  main #sobre .sobre_img .sobre_img_inner {
+    background: var(--null-invert);
+    border-radius: var(--radius);
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin: auto;
+  }
+  main #sobre .sobre_txt {
+    display: flex;
+    flex-direction: column;
+  }
+  main #sobre .sobre_txt h2 {
+    font-size: calc(var(--size) * 1.5);
+    font-weight: bold;
+    text-transform: none;
+  }
+  main #sobre .sobre_txt p {
+    margin: 10px auto;
+  }
+  main #sobre .sobre_txt span {
+    background: var(--gradient);
+    border-radius: 8px 16px;
+    width: 50%;
+    align-self: flex-end;
+    aspect-ratio: 4/1;
+    font-size: calc(var(--size) * 1.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  main #sobre .sobre_txt span:hover {
+    transform: scale(1.05);
+    background: var(--gradient-hover);
+    font-weight: bolder;
+  }
+  main #know .carousel-inner .active {
+    z-index: 1;
+  }
+  main #know .carousel-inner .carousel-item,
+  main #know .carousel-inner .active {
+    background: var(--gradient);
+    border-radius: 10%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    padding: 5%;
+    grid-template-rows: repeat(3, 33.3%);
+  }
+  main #know .carousel-inner .carousel-item i,
+  main #know .carousel-inner .active i {
+    font-size: calc(var(--size) * 4);
+  }
+  main #know .carousel-inner .carousel-item h3,
+  main #know .carousel-inner .active h3 {
+    font-size: calc(var(--size) * 1.5);
+    font-weight: bold;
+    text-align: center;
+  }
+  main #know .carousel-inner .carousel-item p,
+  main #know .carousel-inner .active p {
+    font-size: calc(var(--size) * 1);
+    text-align: center;
+  }
+  main #lvl h2 {
+    font-size: calc(var(--size) * 1.5);
+    text-align: center;
+    font-weight: bold;
+  }
+  main #lvl .cards_lvl {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  main #lvl .cards_lvl .cards_lvl_inner {
+    background: var(--null);
+    width: 100%;
+    aspect-ratio: 5/1;
+    border-radius: 10px 30px;
+    position: relative;
+  }
+  main #lvl .cards_lvl .cards_lvl_inner:nth-child(1) .cards_lvl_reach {
+    width: 80%;
+  }
+  main #lvl .cards_lvl .cards_lvl_inner:nth-child(2) .cards_lvl_reach {
+    width: 60%;
+  }
+  main #lvl .cards_lvl .cards_lvl_inner:nth-child(3) .cards_lvl_reach {
+    width: 30%;
+  }
+  main #lvl .cards_lvl .cards_lvl_inner .cards_lvl_reach {
+    height: 100%;
+    background: var(--gradient);
+    border-radius: 10px 0 0 30px;
+  }
+  main #lvl .cards_lvl .cards_lvl_inner:hover {
+    background: var(--null-invert);
+    box-shadow: 5px 5px 10px var(--solid-30);
+    scale: 1.05;
+  }
+  main #lvl .cards_lvl .cards_lvl_inner:hover .cards_lvl_reach {
+    background: var(--gradient-hover);
+  }
+  main #lvl .cards_lvl .cards_lvl_inner:hover span {
+    color: var(--solid-100);
+    font-weight: bold;
+    font-size: calc(var(--size) * 1.2);
+  }
+  main #lvl .cards_lvl .cards_lvl_inner span {
+    color: var(--solid-50);
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+  main #portifolio .active {
+    z-index: 1;
+  }
+  main #portifolio .cards_port_inner {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--null);
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 80% repeat(2, 10%);
+    padding: 3%;
+  }
+  main #portifolio .cards_port_inner .cards_port_frame {
+    background: var(--null-invert);
+    border-radius: 20px;
+  }
+  main #portifolio .cards_port_inner a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  main #portifolio .cards_port_inner a:hover {
+    font-weight: bold;
+  }
+  main #numeros {
+    background: var(--gradient);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+  }
+  main #numeros i {
+    font-size: calc(var(--size) * 2.5);
+  }
+  main #numeros h3 {
+    font-size: calc(var(--size) * 1.5);
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+  main #social span {
+    margin: auto;
+    background: var(--gradient);
+    display: grid;
+    place-items: center;
+    width: 70px;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius);
+    font-size: calc(var(--size) * 1.9);
+    font-weight: bolder;
+  }
+  main #social span:hover {
+    scale: 1.05;
+    box-shadow: 0 0 10px var(--solid-30);
+    color: var(--solid-100);
+    background: var(--gradient-hover);
+  }
+  main #social span:hover i {
+    scale: 1.1;
+  }
+  main #social p {
+    text-align: center;
+    color: var(--solid-30);
+  }
+  main #social .social_redes {
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--solid-50);
+  }
+  main #social .social_redes span {
+    width: 60px;
+  }
+  main #social .social_redes span i {
+    animation: pulse 4s ease infinite;
+  }
+  main #social .social_redes span i:hover {
+    animation: none;
+    cursor: pointer;
+  }
+  main #social .social_redes span:nth-child(1) i {
+    animation-delay: 0.25s;
+  }
+  main #social .social_redes span:nth-child(2) i {
+    animation-delay: 0.5s;
+  }
+  main #social .social_redes span:nth-child(3) i {
+    animation-delay: 0.75s;
+  }
+  main #social .social_redes span:nth-child(4) i {
+    animation-delay: 1s;
+  }
 }/*# sourceMappingURL=style.css.map */

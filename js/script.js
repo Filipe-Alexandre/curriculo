@@ -15,6 +15,14 @@ navbarClose.addEventListener("click", () => {
   navbarOpen.style.display = "block"
 }
 );
+document.addEventListener("click", (e) => {
+  const isClickInside = navbar.contains(e.target) || navbarOpen.contains(e.target);
+
+  if (!isClickInside) {
+    navbar.style.display = "none";
+    navbarOpen.style.display = "block";
+  }
+});
 
 
 themes.addEventListener("change", () => {
@@ -32,15 +40,15 @@ themes.addEventListener("change", () => {
 // MAIN
 // SOBRE
 // Front
-  document.addEventListener("DOMContentLoaded", function () {
-    new Typed("#DevFront", {
-      strings: ["Front-end"],
-      typeSpeed: 100,
-      backSpeed: 100,
-      backDelay: 1500,
-      loop: true
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  new Typed("#DevFront", {
+    strings: ["Front-end"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1500,
+    loop: true
   });
+});
 
 // Idade
 const idade = document.querySelector(".idade");
