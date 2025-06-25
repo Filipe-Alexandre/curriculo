@@ -647,9 +647,7 @@ footer .back i {
     font-size: calc(var(--size) * 0.9);
   }
   main #home .home_img {
-    display: grid;
-    grid-template-columns: 97% 1fr;
-    place-items: center;
+    display: flex;
   }
   main #home .home_img .foto {
     width: 95%;
@@ -660,7 +658,6 @@ footer .back i {
   main #home .home_img span {
     color: var(--solid-50);
     rotate: 90deg;
-    height: 10px;
   }
   main #redes {
     display: none;

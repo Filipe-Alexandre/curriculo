@@ -836,9 +836,7 @@ footer {
       }
 
       .home_img {
-        display: grid;
-        grid-template-columns: 97% 1fr;
-        place-items: center;
+        display: flex;
 
         .foto {
           width: 95%;
@@ -850,7 +848,6 @@ footer {
         span {
           color: var(--solid-50);
           rotate: 90deg;
-          height: 10px;
         }
       }
     }
