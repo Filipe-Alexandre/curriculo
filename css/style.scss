@@ -547,6 +547,10 @@ main {
 
 
   #portifolio {
+    button {
+      display: none;
+    }
+
     .active {
       z-index: 1;
     }
@@ -566,6 +570,7 @@ main {
       }
 
       a {
+        color: var(--solid-100);
         text-decoration: none;
         cursor: pointer;
 
@@ -886,8 +891,8 @@ footer {
     #know {
 
       .carousel-inner {
-          width: 100%;
-          aspect-ratio: 5 / 1;
+        width: 100%;
+        aspect-ratio: 5 / 1;
 
         .carousel-item,
         .active {
@@ -926,23 +931,24 @@ footer {
       }
     }
 
-
     #lvl {
       display: grid;
       grid-template-columns: repeat(2, 50%);
       gap: 0;
+
       h2 {
-        text-align: center;
+        text-align: right;
+        padding: 10px;
       }
     }
 
     #portifolio {
-      .active {
-        z-index: 1;
+      button {
+        display: flex;
       }
-
       .cards_port_inner {
-        width: 100%;
+        width: 50%;
+        translate: 50% 0;
         aspect-ratio: 3 / 4;
         background: var(--null);
         border-radius: 30px;
@@ -953,15 +959,6 @@ footer {
         .cards_port_frame {
           background: var(--null-invert);
           border-radius: 20px;
-        }
-
-        a {
-          text-decoration: none;
-          cursor: pointer;
-
-          &:hover {
-            font-weight: bold;
-          }
         }
       }
     }
