@@ -367,9 +367,7 @@ main #know .responsive .slick-next {
 main #know .responsive .slick-dots {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
   margin: auto;
-  height: auto;
   padding: 0;
 }
 main #know .responsive .slick-dots li button {
@@ -470,6 +468,7 @@ main #portifolio .responsive .slick-dots {
   margin: auto;
   height: auto;
   padding: 0;
+  margin-top: 10px;
 }
 main #portifolio .responsive .slick-dots li button {
   font-size: 0;
@@ -718,6 +717,12 @@ footer .back i {
   }
   main #sobre .sobre_txt span {
     font-weight: 400;
+  }
+  main #know .responsive {
+    transform: translateX(8px);
+  }
+  main #know .responsive .slick-slide {
+    margin-right: 16px;
   }
   main #lvl {
     display: grid;

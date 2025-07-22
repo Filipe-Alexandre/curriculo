@@ -474,9 +474,7 @@ main {
       .slick-dots {
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
         margin: auto;
-        height: auto;
         padding: 0;
       }
 
@@ -607,6 +605,7 @@ main {
         margin: auto;
         height: auto;
         padding: 0;
+        margin-top: 10px;
       }
 
       .slick-dots li button {
@@ -928,6 +927,16 @@ footer {
 
         span {
           font-weight: 400;
+        }
+      }
+    }
+
+    #know {
+      .responsive {
+        transform: translateX(8px);
+
+        .slick-slide {
+          margin-right: 16px;
         }
       }
     }
