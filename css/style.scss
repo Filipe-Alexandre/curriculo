@@ -440,22 +440,15 @@ main {
 
   #know {
 
-    .carousel-inner {
-
-      .active {
-        z-index: 1;
-      }
-
-      .carousel-item,
-      .active {
+    .responsive {
+      .cards_know {
+        flex: 1;
         background: var(--gradient);
         border-radius: 10%;
-        width: 100%;
         aspect-ratio: 1 / 1;
         display: grid;
         place-items: center;
-        padding: 5%;
-        grid-template-rows: repeat(3, 33.3%);
+        padding: 1%;
 
         i {
           font-size: calc(var(--size) * 4);
@@ -472,7 +465,35 @@ main {
           text-align: center;
         }
       }
+
+      .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
+
+      .slick-dots {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+        height: auto;
+        padding: 0;
+      }
+
+      .slick-dots li button {
+        font-size: 0;
+        border: none;
+        background: var(--solid-50);
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+      }
+
+      .slick-dots li.slick-active button {
+        background: var(--gradient-hover);
+      }
     }
+
   }
 
   #lvl {
@@ -547,39 +568,63 @@ main {
 
 
   #portifolio {
-    button {
-      display: none;
-    }
+    .responsive {
 
-    .active {
-      z-index: 1;
-    }
 
-    .cards_port_inner {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      background: var(--null);
-      border-radius: 30px;
-      display: grid;
-      grid-template-rows: 80% repeat(2, 10%);
-      padding: 3%;
+      .cards_port {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        background: var(--null);
+        border-radius: 30px;
+        display: grid;
+        grid-template-rows: 80% repeat(2, 10%);
+        padding: .5%;
 
-      .cards_port_frame {
-        background: var(--null-invert);
-        border-radius: 20px;
+        .cards_port_frame {
+          background: var(--null-invert);
+          border-radius: 20px;
+        }
+
+        a {
+          color: var(--solid-100);
+          text-decoration: none;
+          cursor: pointer;
+
+          &:hover {
+            font-weight: bold;
+          }
+        }
       }
 
-      a {
-        color: var(--solid-100);
-        text-decoration: none;
-        cursor: pointer;
+      .slick-prev,
+      .slick-next {
+        display: none !important;
+      }
 
-        &:hover {
-          font-weight: bold;
-        }
+      .slick-dots {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+        height: auto;
+        padding: 0;
+      }
+
+      .slick-dots li button {
+        font-size: 0;
+        border: none;
+        background: var(--solid-50);
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+      }
+
+      .slick-dots li.slick-active button {
+        background: var(--null-invert);
       }
     }
   }
+
 
   #numeros {
     background: var(--gradient);
@@ -888,49 +933,6 @@ footer {
       }
     }
 
-    #know {
-
-      .carousel-inner {
-        width: 100%;
-        aspect-ratio: 5 / 1;
-
-        .carousel-item,
-        .active {
-          padding: 0;
-          width: 100%;
-          height: 100%;
-          border-radius: 10px 30px;
-          grid-template-rows: repeat(2, 50%);
-          grid-template-columns: 20% 80%;
-          grid-template-areas:
-            "icon h3"
-            "icon txt" !important;
-
-          i {
-            font-size: calc(var(--size) * 3);
-            grid-area: icon;
-            text-align: left;
-          }
-
-          h3 {
-            font-size: calc(var(--size) * 1.3);
-            font-weight: bold;
-            text-align: center;
-            grid-area: h3;
-            text-align: left;
-            width: 90%;
-          }
-
-          p {
-            font-size: calc(var(--size) * .9);
-            grid-area: txt;
-            text-align: left;
-            width: 90%;
-          }
-        }
-      }
-    }
-
     #lvl {
       display: grid;
       grid-template-columns: repeat(2, 50%);
@@ -946,8 +948,10 @@ footer {
       button {
         display: flex;
       }
+
       .cards_port_inner {
-        width: 50%;
+        max-width: 50%;
+        max-height: 90vh;
         translate: 50% 0;
         aspect-ratio: 3 / 4;
         background: var(--null);
