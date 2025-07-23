@@ -547,6 +547,11 @@ main {
             font-weight: bold;
             font-size: calc(var(--size) * 1.2);
           }
+
+          // ver se um elemento afeta o outro de fora
+          #know {
+            background: red !important;
+          }
         }
 
         span {

@@ -426,6 +426,9 @@ main #lvl .cards_lvl .cards_lvl_inner:hover span {
   font-weight: bold;
   font-size: calc(var(--size) * 1.2);
 }
+main #lvl .cards_lvl .cards_lvl_inner:hover #know {
+  background: red !important;
+}
 main #lvl .cards_lvl .cards_lvl_inner span {
   color: var(--solid-50);
   z-index: 1;
