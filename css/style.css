@@ -606,259 +606,32 @@ footer .back i {
   main #home .home_img {
     aspect-ratio: 1/1 !important;
   }
-  main #redes {
-    display: none;
-  }
-  main #sobre .sobre_img {
-    background: url(../imgs/bordas.svg) no-repeat;
-    background-size: cover;
-  }
-  main #sobre .sobre_img .sobre_img_inner {
-    background: var(--null-invert);
-    border-radius: var(--radius);
-    width: 100%;
-    aspect-ratio: 1/1;
-    margin: auto;
-  }
-  main #sobre .sobre_txt {
-    display: flex;
-    flex-direction: column;
-  }
-  main #sobre .sobre_txt h2 {
-    font-size: calc(var(--size) * 1.5);
-    font-weight: bold;
-    text-transform: none;
-  }
-  main #sobre .sobre_txt p {
-    margin: 10px auto;
-  }
-  main #sobre .sobre_txt span {
-    background: var(--gradient);
-    border-radius: 8px 16px;
-    width: 50%;
-    align-self: flex-end;
-    aspect-ratio: 4/1;
-    font-size: calc(var(--size) * 1.25);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  main #sobre .sobre_txt span:hover {
-    transform: scale(1.05);
-    background: var(--gradient-hover);
-    font-weight: bolder;
-  }
-  main #know .responsive .cards_know {
-    flex: 1;
-    background: var(--gradient);
-    border-radius: 10%;
-    aspect-ratio: 1/1;
-    display: grid;
-    place-items: center;
-    padding: 1%;
+  main #sobre {
+    grid-template-rows: repeat(1, 70vh) !important;
   }
   main #know .responsive .cards_know i {
-    font-size: calc(var(--size) * 4);
+    font-size: calc(var(--size) * 3);
   }
   main #know .responsive .cards_know h3 {
-    font-size: calc(var(--size) * 1.5);
-    font-weight: bold;
-    text-align: center;
+    font-size: calc(var(--size) * 0.9);
   }
   main #know .responsive .cards_know p {
-    font-size: calc(var(--size) * 1);
-    text-align: center;
-  }
-  main #know .responsive .slick-prev,
-  main #know .responsive .slick-next {
-    display: none !important;
-  }
-  main #know .responsive .slick-dots {
-    display: flex;
-    justify-content: space-evenly;
-    margin: auto;
-    padding: 0;
-  }
-  main #know .responsive .slick-dots li button {
-    font-size: 0;
-    border: none;
-    background: var(--solid-50);
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-  }
-  main #know .responsive .slick-dots li.slick-active button {
-    background: var(--gradient-hover);
-  }
-  main #lvl h2 {
-    font-size: calc(var(--size) * 1.5);
-    text-align: center;
-    font-weight: bold;
-  }
-  main #lvl .cards_lvl {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-  }
-  main #lvl .cards_lvl .cards_lvl_inner {
-    background: var(--null);
-    width: 100%;
-    aspect-ratio: 5/1;
-    border-radius: 10px 30px;
-    position: relative;
-  }
-  main #lvl .cards_lvl .cards_lvl_inner:nth-child(1) .cards_lvl_reach {
-    width: 80%;
-  }
-  main #lvl .cards_lvl .cards_lvl_inner:nth-child(2) .cards_lvl_reach {
-    width: 60%;
-  }
-  main #lvl .cards_lvl .cards_lvl_inner:nth-child(3) .cards_lvl_reach {
-    width: 30%;
-  }
-  main #lvl .cards_lvl .cards_lvl_inner .cards_lvl_reach {
-    height: 100%;
-    background: var(--gradient);
-    border-radius: 10px 0 0 30px;
-  }
-  main #lvl .cards_lvl .cards_lvl_inner:hover {
-    background: var(--null-invert);
-    box-shadow: 5px 5px 10px var(--solid-30);
-    scale: 1.05;
-  }
-  main #lvl .cards_lvl .cards_lvl_inner:hover .cards_lvl_reach {
-    background: var(--gradient-hover);
-  }
-  main #lvl .cards_lvl .cards_lvl_inner:hover span {
-    color: var(--solid-100);
-    font-weight: bold;
-    font-size: calc(var(--size) * 1.2);
-  }
-  main #lvl .cards_lvl .cards_lvl_inner span {
-    color: var(--solid-50);
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
+    font-size: calc(var(--size) * 0.8);
   }
   main #portifolio .responsive .cards_port {
-    width: 100%;
-    aspect-ratio: 3/4;
-    background: var(--null);
-    border-radius: 30px;
-    display: grid;
-    grid-template-rows: 80% repeat(2, 10%);
-    padding: 0.5%;
+    padding: 1%;
   }
-  main #portifolio .responsive .cards_port .cards_port_frame {
-    background: var(--null-invert);
-    border-radius: 20px;
+  footer .back {
+    height: 50px !important;
+    bottom: 10px !important;
+    right: 10px !important;
   }
-  main #portifolio .responsive .cards_port a {
-    color: var(--solid-100);
-    text-decoration: none;
-    cursor: pointer;
-  }
-  main #portifolio .responsive .cards_port a:hover {
-    font-weight: bold;
-  }
-  main #portifolio .responsive .slick-prev,
-  main #portifolio .responsive .slick-next {
-    display: none !important;
-  }
-  main #portifolio .responsive .slick-dots {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: auto;
-    height: auto;
-    padding: 0;
-    margin-top: 10px;
-  }
-  main #portifolio .responsive .slick-dots li button {
-    font-size: 0;
-    border: none;
-    background: var(--solid-50);
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-  }
-  main #portifolio .responsive .slick-dots li.slick-active button {
-    background: var(--null-invert);
-  }
-  main #numeros {
-    background: var(--gradient);
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5% 0;
-  }
-  main #numeros i {
-    font-size: calc(var(--size) * 2.5);
-  }
-  main #numeros h3 {
+  footer .back:hover i {
     font-size: calc(var(--size) * 1.5);
-    font-weight: bold;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-  }
-  main #social span {
-    margin: auto;
-    background: var(--gradient);
-    display: grid;
-    place-items: center;
-    width: 70px;
-    aspect-ratio: 1/1;
-    border-radius: var(--radius);
-    font-size: calc(var(--size) * 1.9);
-    font-weight: bolder;
-  }
-  main #social span:hover {
-    scale: 1.05;
-    box-shadow: 0 0 10px var(--solid-30);
-    color: var(--solid-100);
-    background: var(--gradient-hover);
-  }
-  main #social span:hover i {
-    scale: 1.1;
-  }
-  main #social p {
-    text-align: center;
-    color: var(--solid-30);
-  }
-  main #social .social_redes {
-    display: flex;
-    justify-content: space-evenly;
-    color: var(--solid-50);
-  }
-  main #social .social_redes span {
-    width: 60px;
-  }
-  main #social .social_redes span i {
-    animation: pulse 4s ease infinite;
-  }
-  main #social .social_redes span i:hover {
-    animation: none;
     cursor: pointer;
   }
-  main #social .social_redes span:nth-child(1) i {
-    animation-delay: 0.25s;
-  }
-  main #social .social_redes span:nth-child(2) i {
-    animation-delay: 0.5s;
-  }
-  main #social .social_redes span:nth-child(3) i {
-    animation-delay: 0.75s;
-  }
-  main #social .social_redes span:nth-child(4) i {
-    animation-delay: 1s;
+  footer .back i {
+    font-size: calc(var(--size) * 1.2) !important;
   }
 }
 @media screen and (min-width: 768px) {
