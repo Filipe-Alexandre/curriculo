@@ -87,7 +87,7 @@ $('.responsive').slick({
         {
       breakpoint: 1400,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 3,
         infinite: true,
         dots: true
@@ -96,7 +96,7 @@ $('.responsive').slick({
     {
       breakpoint: 1025,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 3,
         infinite: true,
         dots: true
@@ -122,3 +122,47 @@ $('.responsive').slick({
   ]
 });
 		
+$('.responsiveRedes').slick({
+  dots: false,
+  infinite: true,
+  speed: 100,
+  autoplay: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  responsive: [
+        {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});

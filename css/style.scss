@@ -1164,7 +1164,253 @@ footer {
 
 //#region Desktop
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 90%;
+    margin: auto;
+    padding: 1%;
+
+    h1 {
+      order: 1;
+    }
+
+    .fa-bars {
+      display: none;
+    }
+
+    .fa-xmark {
+      display: none;
+    }
+
+    nav,
+    .contato {
+      display: block;
+      order: 3;
+    }
+
+
+    nav {
+      order: 2;
+      display: flex;
+      position: relative;
+      background: none;
+      height: 100%;
+      width: auto;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+
+      ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 50px;
+
+      }
+
+      label {
+        margin-left: 50px;
+      }
+    }
+  }
+
+  main {
+
+    #sobre {
+      margin-top: 175px; // espaço para redes
+
+      .sobre_txt {
+        padding: 10%;
+      }
+    }
+
+    #redes {
+      display: block;
+      height: 75px;
+      width: 100vw;
+      position: absolute;
+      left: 0;
+
+      div {
+        display: flex;
+        justify-content: center;
+        place-items: center;
+
+        i {
+          font-size: calc(var(--size) * 3) !important;
+          text-align: center;
+        }
+      }
+
+    }
+
+    .responsiveRedes {
+
+      .slick-next,
+      .slick-prev {
+        display: none !important;
+      }
+
+      .slick-buttons {
+        display: none !important;
+      }
+
+
+
+
+    }
+
+    #sobre {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      gap: 0;
+      place-items: center;
+
+      .sobre_img {
+        width: 95%;
+      }
+
+      .sobre_txt {
+        h2 {
+          font-size: calc(var(--size) * 1.4);
+        }
+
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+
+    #know {
+      .responsive {
+        transform: translateX(8px);
+
+        .slick-slide {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    #lvl {
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      gap: 0;
+
+      h2 {
+        text-align: right;
+        padding: 10px;
+      }
+    }
+
+    #portifolio {
+      .responsive {
+        transform: translateX(8px);
+
+        .slick-slide {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    #numeros {
+      background: var(--gradient);
+      border-radius: 25px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5% 0;
+
+      i {
+        font-size: calc(var(--size) * 2.5);
+      }
+
+      h3 {
+        font-size: calc(var(--size) * 1.5);
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+    }
+
+    #social {
+      span {
+        margin: auto;
+        background: var(--gradient);
+        display: grid;
+        place-items: center;
+        width: 70px;
+        aspect-ratio: 1 / 1;
+        border-radius: var(--radius);
+        font-size: calc(var(--size) * 1.9);
+        font-weight: bolder;
+
+        &:hover {
+          scale: 1.05;
+          box-shadow: 0 0 10px var(--solid-30);
+          color: var(--solid-100);
+          background: var(--gradient-hover);
+
+          i {
+            scale: 1.1;
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        color: var(--solid-30);
+      }
+
+      .social_redes {
+        display: flex;
+        justify-content: space-evenly;
+        color: var(--solid-50);
+
+        span {
+          width: 60px;
+
+          i {
+            animation: pulse 4s ease infinite;
+
+            &:hover {
+              animation: none;
+              cursor: pointer;
+            }
+          }
+
+          &:nth-child(1) {
+            i {
+              animation-delay: 0.25s;
+            }
+          }
+
+          &:nth-child(2) {
+            i {
+              animation-delay: 0.5s;
+            }
+          }
+
+          &:nth-child(3) {
+            i {
+              animation-delay: 0.75s;
+            }
+          }
+
+          &:nth-child(4) {
+            i {
+              animation-delay: 1s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 //#endregion Desktop
 
@@ -1176,8 +1422,8 @@ footer {
 //#endregion FullScreen
 
 
-//#region Wide
+//#region Wide-4K
 
-@media screen and (min-width: 1400px) {}
+@media screen and (min-width: 3840px) {}
 
-//#endregion Wide
+//#endregion Wide-4K
