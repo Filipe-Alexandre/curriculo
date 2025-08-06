@@ -1226,6 +1226,17 @@ footer {
       .sobre_txt {
         padding: 10%;
       }
+
+      
+      .sobre_img {
+        height: 100%;
+        width: auto;
+
+        .sobre_img_inner {
+          height: 100%;
+          aspect-ratio: 1 / 1 !important;
+        }
+      }
     }
 
     #redes {

@@ -917,6 +917,14 @@ footer .back i {
   main #sobre .sobre_txt {
     padding: 10%;
   }
+  main #sobre .sobre_img {
+    height: 100%;
+    width: auto;
+  }
+  main #sobre .sobre_img .sobre_img_inner {
+    height: 100%;
+    aspect-ratio: 1/1 !important;
+  }
   main #redes {
     display: block;
     height: 75px;
