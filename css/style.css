@@ -856,9 +856,6 @@ footer .back i {
     background: var(--null-invert);
     border-radius: 16px 36px;
   }
-  main #sobre {
-    grid-template-rows: repeat(1, 60vh);
-  }
   main #sobre .sobre_img {
     height: 100%;
     width: auto;
@@ -911,42 +908,23 @@ footer .back i {
   header nav label {
     margin-left: 50px;
   }
-  main #sobre {
-    margin-top: 175px;
-  }
-  main #sobre .sobre_txt {
-    padding: 10%;
-  }
-  main #sobre .sobre_img {
-    height: 100%;
-    width: auto;
-  }
-  main #sobre .sobre_img .sobre_img_inner {
-    height: 100%;
-    aspect-ratio: 1/1 !important;
-  }
   main #redes {
-    display: block;
-    height: 75px;
-    width: 100vw;
-    position: absolute;
-    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
   main #redes div {
-    display: flex;
-    justify-content: center;
+    display: grid;
     place-items: center;
   }
   main #redes div i {
     font-size: calc(var(--size) * 3) !important;
     text-align: center;
+    color: var(--solid-50);
   }
-  main .responsiveRedes .slick-next,
-  main .responsiveRedes .slick-prev {
-    display: none !important;
-  }
-  main .responsiveRedes .slick-buttons {
-    display: none !important;
+  main #redes div i:hover {
+    color: var(--solid-100);
+    filter: drop-shadow(3px 3px 6px var(--solid-50));
   }
   main #sobre {
     display: grid;
@@ -955,7 +933,16 @@ footer .back i {
     place-items: center;
   }
   main #sobre .sobre_img {
-    width: 95%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1 !important;
+  }
+  main #sobre .sobre_img .sobre_img_inner {
+    height: 100%;
+    aspect-ratio: 1/1 !important;
+  }
+  main #sobre .sobre_txt {
+    padding: 10%;
   }
   main #sobre .sobre_txt h2 {
     font-size: calc(var(--size) * 1.4);
