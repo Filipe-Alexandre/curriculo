@@ -576,14 +576,14 @@ main {
         width: 100%;
         aspect-ratio: 3 / 4;
         background: var(--null);
-        border-radius: 30px;
+        border-radius: 24px;
         display: grid;
         grid-template-rows: 80% repeat(2, 10%);
         padding: .5%;
 
         .cards_port_frame {
           background: var(--null-invert);
-          border-radius: 20px;
+          border-radius: 16px;
         }
 
         a {
@@ -794,10 +794,6 @@ footer {
       .home_img {
         aspect-ratio: 1 / 1 !important;
       }
-    }
-
-    #sobre {
-      grid-template-rows: repeat(1, 70vh) !important;
     }
 
     #know {
@@ -1263,6 +1259,7 @@ footer {
 
       .sobre_txt {
         padding: 10%;
+
         h2 {
           font-size: calc(var(--size) * 1.4);
         }
@@ -1274,32 +1271,27 @@ footer {
     }
 
     #know {
-      .responsive {
-        transform: translateX(8px);
+      .cards_know {
+        i {
+          font-size: calc(var(--size) * 2.8) !important;
+        }
 
-        .slick-slide {
-          margin-right: 16px;
+        h3 {
+          font-size: calc(var(--size) * 1.06) !important;
+        }
+
+        p {
+          font-size: calc(var(--size) * .8) !important;
         }
       }
     }
 
-    #lvl {
-      display: grid;
-      grid-template-columns: repeat(2, 50%);
-      gap: 0;
-
-      h2 {
-        text-align: right;
-        padding: 10px;
-      }
-    }
-
     #portifolio {
-      .responsive {
-        transform: translateX(8px);
+      .cards_port {
+        padding: 10px !important;
 
-        .slick-slide {
-          margin-right: 16px;
+        a,strong{
+          margin-left: 10px;
         }
       }
     }

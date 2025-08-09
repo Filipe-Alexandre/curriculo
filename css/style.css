@@ -443,14 +443,14 @@ main #portifolio .responsive .cards_port {
   width: 100%;
   aspect-ratio: 3/4;
   background: var(--null);
-  border-radius: 30px;
+  border-radius: 24px;
   display: grid;
   grid-template-rows: 80% repeat(2, 10%);
   padding: 0.5%;
 }
 main #portifolio .responsive .cards_port .cards_port_frame {
   background: var(--null-invert);
-  border-radius: 20px;
+  border-radius: 16px;
 }
 main #portifolio .responsive .cards_port a {
   color: var(--solid-100);
@@ -608,9 +608,6 @@ footer .back i {
   }
   main #home .home_img {
     aspect-ratio: 1/1 !important;
-  }
-  main #sobre {
-    grid-template-rows: repeat(1, 70vh) !important;
   }
   main #know .responsive .cards_know i {
     font-size: calc(var(--size) * 3);
@@ -950,26 +947,20 @@ footer .back i {
   main #sobre .sobre_txt span {
     font-weight: 400;
   }
-  main #know .responsive {
-    transform: translateX(8px);
+  main #know .cards_know i {
+    font-size: calc(var(--size) * 2.8) !important;
   }
-  main #know .responsive .slick-slide {
-    margin-right: 16px;
+  main #know .cards_know h3 {
+    font-size: calc(var(--size) * 1.06) !important;
   }
-  main #lvl {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 0;
+  main #know .cards_know p {
+    font-size: calc(var(--size) * 0.8) !important;
   }
-  main #lvl h2 {
-    text-align: right;
-    padding: 10px;
+  main #portifolio .cards_port {
+    padding: 10px !important;
   }
-  main #portifolio .responsive {
-    transform: translateX(8px);
-  }
-  main #portifolio .responsive .slick-slide {
-    margin-right: 16px;
+  main #portifolio .cards_port a, main #portifolio .cards_port strong {
+    margin-left: 10px;
   }
   main #numeros {
     background: var(--gradient);
