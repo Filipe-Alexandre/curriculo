@@ -1301,15 +1301,22 @@ footer {
 //#endregion Desktop
 
 
-//#region FullScreen
+//#region Full
 
 @media screen and (min-width: 1200px) {}
 
-//#endregion FullScreen
+//#endregion Full
+
+
+//#region FullScreenDefault
+
+@media screen and (min-width: 1920px) {}
+
+//#endregion FullScreenDefault
 
 
 //#region Wide-4K
 
-@media screen and (min-width: 3840px) {} 
+@media screen and (min-width: 3840px) {} //
 
 //#endregion Wide-4K
