@@ -84,10 +84,19 @@ $('.responsive').slick({
   slidesToShow: 4,
   slidesToScroll: 4,
   responsive: [
-        {
-      breakpoint: 1400,
+    {
+      breakpoint: 1401,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 1201,
+      settings: {
+        slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
         dots: true
@@ -121,4 +130,3 @@ $('.responsive').slick({
     // instead of a settings object
   ]
 });
-		
