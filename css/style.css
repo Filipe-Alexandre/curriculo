@@ -861,6 +861,9 @@ footer .back i {
     height: 100%;
     aspect-ratio: 1/1 !important;
   }
+  main #know .responsive .cards_know p {
+    font-size: calc(var(--size) * 0.7) !important;
+  }
 }
 @media screen and (min-width: 992px) {
   header {

@@ -1151,6 +1151,16 @@ footer {
         }
       }
     }
+
+    #know {
+      .responsive {
+        .cards_know {
+          p {
+            font-size: calc(var(--size) * .7) !important;
+          }
+        }
+      }
+    }
   }
 }
 
