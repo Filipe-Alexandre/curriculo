@@ -24,19 +24,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-
-// themes.addEventListener("change", () => {
-//   if (themes.checked) {
-//     // Adiciona a classe light, removendo a dark
-//     document.documentElement.classList.add("light");
-//     document.documentElement.classList.remove("dark");
-//   } else {
-//     // Adiciona a classe dark, removendo a light
-//     document.documentElement.classList.add("dark");
-//     document.documentElement.classList.remove("light");
-//   }
-// });
-
 themes.addEventListener("change", () => {
   const sobreImg = document.querySelector("#sobre .sobre_img");
 
