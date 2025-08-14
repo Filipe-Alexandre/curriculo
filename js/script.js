@@ -25,15 +25,31 @@ document.addEventListener("click", (e) => {
 });
 
 
+// themes.addEventListener("change", () => {
+//   if (themes.checked) {
+//     // Adiciona a classe light, removendo a dark
+//     document.documentElement.classList.add("light");
+//     document.documentElement.classList.remove("dark");
+//   } else {
+//     // Adiciona a classe dark, removendo a light
+//     document.documentElement.classList.add("dark");
+//     document.documentElement.classList.remove("light");
+//   }
+// });
+
 themes.addEventListener("change", () => {
+  const sobreImg = document.querySelector("#sobre .sobre_img");
+
   if (themes.checked) {
-    // Adiciona a classe light, removendo a dark
+    // Modo claro - (adiciona o light e remove o dark)
     document.documentElement.classList.add("light");
     document.documentElement.classList.remove("dark");
+    sobreImg.style.backgroundImage = "url('../imgs/bordas_lightMode.svg')"; // Troca o background
   } else {
-    // Adiciona a classe dark, removendo a light
+    // Modo escuro - (adiciona o dark e remove o light)
     document.documentElement.classList.add("dark");
     document.documentElement.classList.remove("light");
+    sobreImg.style.backgroundImage = "url('../imgs/bordas_darkMode.svg')"; // Troca o background
   }
 });
 

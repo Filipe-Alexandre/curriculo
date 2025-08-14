@@ -298,8 +298,11 @@ main #home .home_img {
 main #redes {
   display: none;
 }
+main #redes div i:hover {
+  cursor: pointer;
+}
 main #sobre .sobre_img {
-  background: url(../imgs/bordas.svg) no-repeat;
+  background: url(../imgs/bordas_darkMode.svg) no-repeat;
   background-size: cover;
 }
 main #sobre .sobre_img .sobre_img_inner {
@@ -738,6 +741,10 @@ footer .back i {
     height: -moz-fit-content;
     height: fit-content;
   }
+  main #home .home_img span:hover {
+    color: var(--solid-100);
+    filter: drop-shadow(3px 3px 6px var(--solid-50));
+  }
   main #redes {
     display: none;
   }
@@ -761,6 +768,9 @@ footer .back i {
   }
   main #know .responsive .slick-slide {
     margin-right: 16px;
+  }
+  main #know .responsive .slick-slide h3 {
+    font-size: calc(var(--size) * 1.108);
   }
   main #lvl {
     display: grid;
@@ -862,7 +872,7 @@ footer .back i {
     aspect-ratio: 1/1 !important;
   }
   main #know .responsive .cards_know p {
-    font-size: calc(var(--size) * 0.7) !important;
+    font-size: calc(var(--size) * 0.7);
   }
 }
 @media screen and (min-width: 992px) {
@@ -962,7 +972,118 @@ footer .back i {
   main #portifolio .cards_port {
     padding: 10px !important;
   }
-  main #portifolio .cards_port a, main #portifolio .cards_port strong {
+  main #portifolio .cards_port a,
+  main #portifolio .cards_port strong {
     margin-left: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section {
+    max-width: 80%;
+  }
+  section h2 {
+    font-size: calc(var(--size) * 2.5) !important;
+  }
+  header {
+    max-width: 80%;
+  }
+  header h1 {
+    height: 75px;
+    font-size: calc(var(--size) * 3);
+  }
+  header .fa-bars {
+    display: none !important;
+  }
+  header nav {
+    display: flex !important;
+    font-size: calc(var(--size) * 1.8);
+  }
+  header .contato {
+    height: 65px;
+    width: 150px;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1/6 !important;
+    font-size: calc(var(--size) * 1.3);
+  }
+  main #home .home_txt h2 {
+    font-size: calc(var(--size) * 4);
+  }
+  main #home .home_txt p {
+    font-size: calc(var(--size) * 1.5);
+  }
+  main #home .home_txt a {
+    font-size: calc(var(--size) * 1.5);
+  }
+  main #home .home_txt a i {
+    font-size: calc(var(--size) * 1.5);
+  }
+  main #home .home_img .foto {
+    width: auto;
+    aspect-ratio: 3/4 !important;
+  }
+  main #home .home_img span {
+    font-size: calc(var(--size) * 2);
+  }
+  main #redes div i {
+    font-size: calc(var(--size) * 3) !important;
+  }
+  main #sobre .sobre_txt h2 {
+    font-size: calc(var(--size) * 2.3) !important;
+  }
+  main #sobre .sobre_txt p {
+    font-size: calc(var(--size) * 1.5) !important;
+  }
+  main #sobre .sobre_txt span {
+    font-size: calc(var(--size) * 1.8) !important;
+  }
+  main #know .cards_know i {
+    font-size: calc(var(--size) * 5) !important;
+  }
+  main #know .cards_know h3 {
+    font-size: calc(var(--size) * 1.6) !important;
+  }
+  main #know .cards_know p {
+    font-size: calc(var(--size) * 1.4) !important;
+  }
+  main #lvl span {
+    font-size: calc(var(--size) * 1.5) !important;
+  }
+  main #portifolio a {
+    font-size: calc(var(--size) * 1.5) !important;
+  }
+  main #numeros {
+    padding: 3% 0;
+  }
+  main #numeros i {
+    font-size: calc(var(--size) * 3) !important;
+  }
+  main #numeros h3 {
+    font-size: calc(var(--size) * 2) !important;
+  }
+  main #social span {
+    width: 100px;
+    height: 100px;
+    font-size: calc(var(--size) * 3.5);
+  }
+  main #social h2 {
+    font-size: calc(var(--size) * 1.9) !important;
+  }
+  main #social p {
+    font-size: calc(var(--size) * 1.5);
+  }
+  main #social .social_redes span {
+    height: 80px;
+    width: 80px;
+    font-size: calc(var(--size) * 2.2);
+  }
+  footer p {
+    font-size: calc(var(--size) * 1.3) !important;
+  }
+  footer .back {
+    height: 75px !important;
+  }
+  footer .back i {
+    font-size: calc(var(--size) * 2) !important;
   }
 }/*# sourceMappingURL=style.css.map */
