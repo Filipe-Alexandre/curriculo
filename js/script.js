@@ -32,11 +32,13 @@ themes.addEventListener("change", () => {
     document.documentElement.classList.add("light");
     document.documentElement.classList.remove("dark");
     sobreImg.style.background = "url('.././imgs/bordas_lightMode.svg')"; // Troca o background
+    sobreImg.style.backgroundSize = "cover";
   } else {
     // Modo escuro - (adiciona o dark e remove o light)
     document.documentElement.classList.add("dark");
     document.documentElement.classList.remove("light");
     sobreImg.style.background = "url('.././imgs/bordas_darkMode.svg')"; // Troca o background
+    sobreImg.style.backgroundSize = "cover";
   }
 });
 
