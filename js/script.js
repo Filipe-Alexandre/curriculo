@@ -31,12 +31,12 @@ themes.addEventListener("change", () => {
     // Modo claro - (adiciona o light e remove o dark)
     document.documentElement.classList.add("light");
     document.documentElement.classList.remove("dark");
-    sobreImg.style.backgroundImage = "url('../imgs/bordas_lightMode.svg')"; // Troca o background
+    sobreImg.style.background = "url('../imgs/bordas_lightMode.svg')"; // Troca o background
   } else {
     // Modo escuro - (adiciona o dark e remove o light)
     document.documentElement.classList.add("dark");
     document.documentElement.classList.remove("light");
-    sobreImg.style.backgroundImage = "url('../imgs/bordas_darkMode.svg')"; // Troca o background
+    sobreImg.style.background = "url('../imgs/bordas_darkMode.svg')"; // Troca o background
   }
 });
 
